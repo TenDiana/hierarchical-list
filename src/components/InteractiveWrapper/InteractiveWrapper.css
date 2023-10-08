@@ -1,0 +1,168 @@
+@charset "UTF-8";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+}
+.wrapper__content {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+}
+.wrapper__content-list {
+  width: fit-content;
+  position: relative;
+  user-select: none;
+  transition: top 0.1s ease, left 0.1s ease;
+}
+.wrapper__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+  margin: 25px 25px 0 25px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+.wrapper__header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper__header-left__title {
+  font-family: "Gill Sans", sans-serif;
+  font-weight: lighter;
+}
+.wrapper__header-left__count {
+  background-color: orange;
+  font-weight: 800;
+  font-size: 11px;
+  color: white;
+  padding: 4px 7px;
+  border-radius: 6px;
+  margin-left: 7px;
+}
+.wrapper__control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper__control__list {
+  width: auto;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #5c5fee;
+  color: white;
+  text-align: center;
+  padding: 6px 10px;
+}
+.wrapper__control__buttons {
+  display: flex;
+}
+.wrapper__control__buttons__center {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(224, 224, 224);
+  text-align: center;
+  margin: 0 4px;
+}
+.wrapper__control__buttons__center-img {
+  width: 10px;
+  transform: rotate(225deg);
+}
+.wrapper__control__buttons__center:hover {
+  width: _;
+  height: _;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(224, 224, 224);
+  color: white;
+  text-align: center;
+}
+.wrapper__control__buttons__center::before {
+  width: 90px;
+  content: "go to center";
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  font-size: 11px;
+  z-index: 1;
+  bottom: -25px; /* Расстояние между кнопкой и всплывающим текстом */
+  left: 0;
+  transform: translateX(-50%);
+  transition: visibility 0.2s, opacity 0.2s; /* Анимация появления/скрытия */
+}
+.wrapper__control__buttons__center:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+.wrapper__control__buttons__decrement, .wrapper__control__buttons__increment {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(224, 224, 224);
+  text-align: center;
+}
+.wrapper__control__buttons__decrement:hover, .wrapper__control__buttons__increment:hover {
+  width: _;
+  height: _;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(224, 224, 224);
+  color: white;
+  text-align: center;
+}
+.wrapper__control__buttons__select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background-color: #fff;
+  color: rgb(224, 224, 224);
+  margin: 0 3px;
+  cursor: pointer;
+}
+.wrapper__control__buttons__select-option {
+  width: 75px;
+  position: absolute;
+  top: 34px;
+  left: -5px;
+  z-index: 10;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(214, 214, 214, 0.64);
+}
+.wrapper__control__buttons__select-option :hover {
+  background-color: rgb(224, 224, 224);
+  color: gray;
+}
+.wrapper__control__buttons__select-option > .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.a {
+  width: 15px;
+}
+
+/*# sourceMappingURL=InteractiveWrapper.css.map */

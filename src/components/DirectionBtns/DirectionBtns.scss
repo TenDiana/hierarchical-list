@@ -1,0 +1,46 @@
+@import "src/styles/styles";
+.up{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  .icon{
+    transform: rotate(-90deg);
+  }
+}
+.side {
+  &__left{
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: rotate(-90deg);
+    .icon{
+      transform: rotate(-90deg);
+    }
+  }
+  &__right{
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: rotate(90deg);
+    .icon{
+      transform: rotate(-90deg);
+    }
+  }
+}
+.down{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  .icon{
+    transform: rotate(90deg);
+  }
+}
+.icon{
+  width: 15px;
+}
+.up, .down, .side__left, .side__right{
+  z-index: 10;
+  @include btn(70px, 30px, $primary-color, white);
+}

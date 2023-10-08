@@ -1,0 +1,10 @@
+@mixin btn($w, $h, $bc, $tc){
+  width: $w;
+  height: $h;
+  border: none;
+  cursor: pointer;
+  background-color: $bc;
+  color: $tc;
+  text-align: center;
+}
+$primary-color: rgb(224, 224, 224)
